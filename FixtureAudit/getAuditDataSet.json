@@ -1,0 +1,88 @@
+{
+    "runTime":["13:02","03:03","09:03","13:03","16:03","20:35"],
+    "getStationListurl":"http://172.30.70.213/gh/gh_Console.aspx",
+    "uploadAuditDateurl":"http://172.30.70.161/appApi/sysAudit/updateFixtureAudit",
+    "uploadAuditDateurlxx":"http://10.42.23.14:8081/appApi/sysAudit/updateFixtureAudit",
+    "uploadAuditDateurl_bak":"http://172.30.70.213/gh/gh_Console.aspx",
+    "station_list":{
+        "D63":{
+            "#sample 名字与程序内关联，不能随便改":{
+                "stationtype":"这里要用GH report 里的stationtype",
+                "audit_file":"#开头的一行是注释  audit_day:一次audit可维持天数 alertDay 提前3天预警",
+                "audit_day":13,
+                "alertDay":5
+            },
+            "###csc":{
+                "stationtype":"D63 COMPASS-CAL",
+                "audit_file":"/vault/csc_cal_data/cal_file.plist",
+                "auditDay":15,
+                "alertDay":5,
+                "readme":"no need any more."
+            },
+            "dvi":{
+                "stationtype":"D63 DISPLAY",
+                "audit_file":"/vault/auditFile/audit.json",
+                "auditDay":45,
+                "alertDay":5,
+                "readme":"ready to use."
+            },
+            "isd":{
+                "stationtype":"D63 DISPLAY-POSTBURN",
+                "audit_file":"/vault/auditFile/audit.json",
+                "auditDay":45,
+                "alertDay":5,
+                "readme":"ready to use."
+            },
+            "xtalk_cal":{
+                "stationtype":"D63 ALS X-TALK CAL",
+                "audit_file":"/vault/Atlas/Audit_1.json",
+                "auditDay":30,
+                "alertDay":5,
+                "readme":"ready to use."
+            },
+            "alpha":{
+                "stationtype":"D63 COMPLIANCE5",
+                "audit_file":"/vault/.AlphaAuditFiles/LinearityAudit.Plist",
+                "auditDay":30,
+                "alertDay":5,
+                "readme":"ready /Vault--->Alpha Auidt Files(隐藏文件夹)"
+            },
+            "miyagi":{
+                "stationtype":"D63 COMPLIANCE4",
+                "audit_file":"/vault/.MiyagiAuditFiles/AuditRls.plist",
+                "auditDay":45,
+                "alertDay":5,
+                "readme":"ready /Vault--->Miyagi Auidt Files(隐藏文件夹)"
+            },
+            "voyager":{
+                "stationtype":"D63 COMPLIANCE10",
+                "audit_file":"/vault/.VoyagerAuditFiles/AlphaRLSAudit_GPW00111046LVTQAA.plist",
+                "auditDay":30,
+                "alertDay":5,
+                "readme":"ready ,but seems file name not fix./Vault--->Voyager Auidt Files(隐藏文件夹)"
+            },
+            "sa_fact2":{
+                "stationtype":"D63 SA-FACT2",
+                "audit_file":"/vault/mrmd.rlist",
+                "auditDay":33,
+                "alertDay":5,
+                "readme":"ready "
+            },
+            "fact21":{
+                "stationtype":"D63 FACT",
+                "audit_file":"/vault/mrmd.rlist",
+                "auditDay":33,
+                "alertDay":5,
+                "readme":"ready "
+            },
+            "vent2":{
+                "stationtype":"D63 VIBRATOR",
+                "audit_file":"/vault/mrmd.rlist",
+                "auditDay":30,
+                "alertDay":5,
+                "readme":"ready "
+            }
+ 
+        }
+    }
+}

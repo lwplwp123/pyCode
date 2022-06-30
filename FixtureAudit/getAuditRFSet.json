@@ -1,0 +1,121 @@
+{
+    "runTime":["03:49", "13:03" ],
+    "getStationListurl":"http://172.30.70.213/gh/gh_Console.aspx",
+    "uploadAuditDateurl":"http://172.30.70.161/appApi/sysAudit/updateFixtureAudit",
+    "station_list_OnLine":{
+        "D63":{
+            "#sample":{
+                "stationtype":"这里要用GH report 里的stationtype",
+                "audit_file":"#开头的一行是注释  这里是个路径，每次只选最新的一个.log 文件",
+                "readme":"因仪器特性不同,T536,T265 以第一次上线开始计时;T677 以Re-CalLine (T677 Developement9) 测试PASS开始计时;T625,T877 手动输入计时开始时间"
+            },
+            "rf-ota-6":{
+                "stationtype":"D63 RF-OTA-6",
+                "audit_file":"/Users/gdlocal/Documents/WiPASXNext_0_1/test_station_output_blob/",
+                "equips":[
+                        {"name":"T536",
+                            "reg":"RadioStar serial number is (.*)",
+                            "expDay":180,
+                            "alertDay":20} 
+                ],
+                "readme":"ok. 另一个本站用的是T677 mT677SerialNum : (.*) 180 20 : 以Re-CalLine PASS 开始计时"
+            },
+            "####rf-ota-5":{
+                "stationtype":"D63 RF-OTA-5",
+                "audit_file":"/Users/gdlocal/Documents/WiPASX2020_0_0/test_station_output_log/",
+                "equips":[
+                        {"name":"T625",
+                            "reg":"Apple RadioStar] Serial Number: (.*)",
+                            "expDay":365,
+                            "alertDay":20}
+                ],
+                "readme":"T625 厂外re-Cal,手动输入计时开始时间"
+            },
+            "###rf-ota-10":{
+                "stationtype":"D63 RF-OTA-10",
+                "audit_file":"/Users/gdlocal/Documents/WiPASX2020_0_0/test_station_output_log/",
+                "equips":[
+                        {"name":"T877",
+                            "reg":"Serial Number: (\\w{15,})",
+                            "expDay":365,
+                            "alertDay":20}
+                ],
+                "readme":"T877 厂外re-Cal,手动输入计时开始时间"
+            },
+            "sota-2":{
+                "stationtype":"D63 S-OTA2",
+                "audit_file":"/Users/gdlocal/Documents/WiPASXNext_0_1/test_station_output_blob/",
+                "equips":[
+                        {"name":"T265",
+                            "reg":"Unit serial number is (.*)",
+                            "expDay":180,
+                            "alertDay":20}
+                ],
+                "readme":"ok. T265 以第一次上线开始计时"
+            },
+            "wifi-bt-ota":{
+                "stationtype":"D63 WIFI-BT-OTA",
+                "audit_file":"/Users/gdlocal/Documents/WiPASXNext_0_1/test_station_output_blob/",
+                "equips":[
+                        {"name":"T536",
+                            "reg":"Serial Num # (.*)",
+                            "expDay":180,
+                            "alertDay":20}
+                ],
+                "readme":"ok.T536 以第一次上线开始计时"
+            }
+        } 
+    },
+    "k_list_Wait1STonline":{
+        "T536":{ 
+            "#sample 这里的list 是要读取全部文件并把每一个文件SN上传到Server.上传过的就是Cal过的":{
+                "stationtype":"这里要用GH report 里的stationtype",
+                "audit_file":"#开头的一行是注释  这里是个路径，要把每个文件上传一次,SN+时间,上传后移动/删除 文件",
+                "readme":"T677 以Re-CalLine (T677 DEVELOPMENT9) 测试PASS开始计时 ; T536,T265 只是reset,等上线时开始计时"
+            },  
+            "SMT-DEVELOPMENT27":{
+                "stationtype":"T536 SMT-DEVELOPMENT27",
+                "audit_file":"/Users/gdlocal/Documents/WiPASXNext_0_1/test_station_output_blob/",
+                "equips":[
+                        {"name":"T536",
+                            "reg":"Serial Number: (.*)",
+                            "expDay":180,
+                            "alertDay":20
+                        }
+                ],
+                "readme":"ready.这里只用做reset接口"
+            }
+        },
+        "T265":{  
+            "SMT-DEVELOPMENT8":{
+                "stationtype":"T265 SMT-DEVELOPMENT8",
+                "audit_file":"/Users/gdlocal/Documents/WiPASXNext_0_1/test_station_output_blob/",
+                "equips":[
+                        {"name":"T265",
+                            "reg":"Serial number is (.*)",
+                            "expDay":180,
+                            "alertDay":20
+                        } 
+                ],
+                "readme":"ready. 这里只用做reset接口"
+            } 
+        }
+    },
+    "k_list_CountDownNow": {
+        "T677":{
+                "DEVELOPMENT9":{
+                    "stationtype":"T677 DEVELOPMENT9",
+                    "audit_file":"/vault/meerkat/F4-MAIN/",
+                    "equips":[ 
+                            {"name":"T677",
+                                "reg":"mT677SerialNum : (.*)",
+                                "expDay":180,
+                                "alertDay":20
+                            }
+                    ],
+                    "readme":" 以Re-CalLine (T677 DEVELOPMENT9) 测试PASS开始计时 "
+                }
+        } 
+    }
+
+}
